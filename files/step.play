@@ -1,6 +1,6 @@
-[0.1s] {"set": "mode", "to": "wait" }
+<'^\s*{',1,5s> {"set":"mode","to":"stop"}
 [0.1s] {"set":"mode","to":"position"}
 [0.1s] {"set":"parameters","kp":1,"ki":0,"kd":0}
 [0.1s] {"set":"position","to":6}
 [1.5s] {"set": "mode", "to": "wait" }
-[1s]
+[0.5s] {"set": "mode", "to": "stop" }
