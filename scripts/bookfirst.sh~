@@ -1,0 +1,16 @@
+#!/bin/bash
+if [ -z "$EXPT" ]
+then
+      echo "\$EXPT is empty"
+fi
+if [ -z "$LOGIN_CODE" ]
+then
+      echo "\$LOGIN_CODE is empty"
+fi
+
+token=$(curl "https://assets.practable.io/tokens/$LOGIN_CODE")
+
+pools=$curl(curl https://book.practable.io/api/v1/login -H "Accept: application/json" -H "Authorization: $token")
+
+export pools
+
